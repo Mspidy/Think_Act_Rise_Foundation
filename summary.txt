@@ -1,0 +1,28 @@
+📝 Summary: What This Script Does
+This Python script automates the process of retrieving court case details from the Indian eCourts portal using a CNR number. Here's how it works:
+
+🔹 Step-by-Step Workflow
+Launches a Chrome browser using Selenium with custom settings to allow automatic PDF downloads.
+
+Navigates to the eCourts portal and selects the CNR Number search option.
+
+Inputs a specific CNR number to search for a case.
+
+Waits for the user to manually solve the CAPTCHA, which is required to access case details.
+
+After CAPTCHA verification, it loads the case page and uses BeautifulSoup to:
+
+Extract all visible tables from the page (e.g., case details, FIR info, parties, history, orders).
+
+Convert each table into a structured format.
+
+Saves the extracted data in two formats:
+
+A JSON file (case_tables.json) for structured data storage.
+
+A PDF file (case_tables.pdf) that presents all tables in a readable format.
+
+✅ Output
+case_tables.json: Contains all table data in structured JSON format.
+
+case_tables.pdf: A printable summary of all case tables.
